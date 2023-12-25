@@ -29,7 +29,7 @@ describe('Google Test', () => {
     cy.get('#loginForm_email').type('bipin@dhoon.co')
     cy.get('#loginForm_password').type('bipin000')
     cy.contains('Login').click()
-
+    cy.contains('Request failed with status code 500').and('be.visible')
 
   })
 
